@@ -1,4 +1,4 @@
-package com.pls;
+package com.pls.address;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,16 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import java.io.IOException;
-
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 
-public class HelloApplication extends Application {
+public class MainApp extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
@@ -37,7 +31,7 @@ public class HelloApplication extends Application {
     public void initRootLayout() {
         try {
             // Загружаем корневой макет из fxml файла.
-            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("/com/pls/RootLayout.fxml"));
+            FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/com/pls/view/RootLayout.fxml"));
             rootLayout = (BorderPane) loader.load();
 
             // Отображаем сцену, содержащую корневой макет.
@@ -56,7 +50,7 @@ public class HelloApplication extends Application {
     public void showPersonOverview() {
         try {
             // Загружаем сведения об адресатах.
-            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("/com/pls/PersonOverview.fxml"));
+            FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/com/pls/view/BookOverview.fxml"));
 
             AnchorPane personOverview = (AnchorPane) loader.load();
 

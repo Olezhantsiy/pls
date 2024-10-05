@@ -4,5 +4,6 @@ module com.pls {
 
 
     opens com.pls to javafx.fxml;
-    exports com.pls;
+    exports com.pls.address;
+    opens com.pls.address to javafx.fxml;
 }
