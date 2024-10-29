@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -48,6 +49,9 @@ public class MainApp extends Application {
         this.primaryStage.setTitle("BookApp");
 
         initRootLayout();
+
+        this.primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/images/4227836.png")));
+
 
         showBookOverview();
     }
